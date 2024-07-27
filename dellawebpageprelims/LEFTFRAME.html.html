@@ -1,0 +1,240 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandellaleftFrame</title>
+    <style>
+        body{
+            background-color: pink;
+            Font-family: Arial, sans-serif;
+    Color: black;
+    Margin: 0;
+    Padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+
+        }
+      
+       
+    
+
+Header {
+    Background-color: pink;
+    Color: black;
+    Text-align: center;
+    Padding: 20px;
+}
+
+Nav {
+    Background-color: pink;
+    Color: white;
+}
+
+Nav ul {
+    List-style-type: none;
+    Padding: 0;
+}
+
+Nav ul li {
+    Display: inline;
+    Margin-right: 10px;
+}
+
+Nav ul li a {
+    Color: white;
+    Text-decoration: none;
+}
+
+Main {
+    Padding: 20px;
+}
+
+Section {
+    Margin-bottom: 20px;
+}
+
+Footer {
+    Background-color: pink;
+    Color: black;
+    Text-align: center;
+    Padding: 10px;
+    Position: fixed;
+    Width: 100%;
+    Bottom: 0;
+}
+
+
+
+.pinkdark{
+    text-align: center;
+    color: white;
+    background-color: rgb(117, 45, 67);
+    padding: 20px;
+}
+.pinklight{
+    text-align: center;
+    color: white;
+    background-color: rgb(146, 31, 37);
+    padding: 20px;
+}
+.pinkviolet{
+    text-align: center;
+    color: white;
+    background-color: rgb(163, 49, 129);
+    padding: 20px;
+}
+.pinkm{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(197, 163, 182);
+    padding: 20px;
+}
+  .pinkk{
+    text-align: center;
+    color: rgb(216, 148, 174);
+    background-color: rgb(221, 29, 138);
+    padding: 20px;
+  }
+  .pinkhey{
+    text-align: center;
+    color: white;
+    background-color: rgb(207, 128, 128);
+    padding: 20px;
+  }
+button{
+    text-align: center
+    ;
+    color: aliceblue;
+
+    
+}
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    
+    <nav>
+        <ul>
+          
+          <section> <button class="pinkdark"> <li><a href="about2.html" target="rightframe" >About Me</a></li></button><br>
+            <br></section> 
+            <section> <button class="pinklight"><li><a href="favorites.html" target="rightframe">Favorites</a></li></button><br>
+                <br>
+        </section>   
+                <section><button class="pinkviolet"><li><a href="family.html" target="rightframe">Family</a></li></button><br>
+                    <br></section>
+                <section><button class="pinkm"> <li><a href="phptos.html" target="rightframe">Photos</a></li></button><br>
+                    <br></section>
+        <section><button class="pinkk"> <li><a href="hobbies.html" target="rightframe">Hobbies</a></li>
+        </ul></button><br>
+        <br></section>
+        <section> <button class="pinkhey"><li><a href="more.html" target="rightframe">More</a></li></button><br>
+            <br>
+        </ul>
+    </nav>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandellaleftFrame</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav {
+            background-color: pink;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+        }
+
+        nav ul li {
+            margin: 10px 0; /* Vertical spacing */
+        }
+
+        nav ul li button {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white; /* Ensures text is readable on all button colors */
+            text-align: center;
+        }
+
+        nav ul li button:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .pinkdark {
+            background-color: rgb(117, 45, 67);
+        }
+        .pinklight {
+            background-color: rgb(146, 31, 37);
+        }
+        .pinkviolet {
+            background-color: rgb(163, 49, 129);
+        }
+        .pinkm {
+            background-color: rgb(197, 163, 182);
+            color: black; /* Dark text for light background */
+        }
+        .pinkk {
+            background-color: rgb(221, 29, 138);
+        }
+        .pinkhey {
+            background-color: rgb(207, 128, 128);
+        }
+
+        .nav-icon {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><button class="pinkdark"><i class="fas fa-user nav-icon"></i><a href="about2.html" target="rightframe">About Me</a></button></li>
+            <li><button class="pinklight"><i class="fas fa-star nav-icon"></i><a href="favorites.html" target="rightframe">Favorites</a></button></li>
+            <li><button class="pinkviolet"><i class="fas fa-users nav-icon"></i><a href="family.html" target="rightframe">Family</a></button></li>
+            <li><button class="pinkm"><i class="fas fa-photo-video nav-icon"></i><a href="phptos.html" target="rightframe">Photos</a></button></li>
+            <li><button class="pinkk"><i class="fas fa-hobby nav-icon"></i><a href="hobbies.html" target="rightframe">Hobbies</a></button></li>
+            <li><button class="pinkhey"><i class="fas fa-plus nav-icon"></i><a href="more.html" target="rightframe">More</a></button></li>
+        </ul>
+    </nav>
+</body>
+</html>

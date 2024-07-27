@@ -1,0 +1,478 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randella's Family Photos</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff69b4; 
+        }
+
+        .favorites-section {
+            margin: 20px 0;
+        }
+
+        .favorites-section h2 {
+            color: #ff69b4; 
+        }
+
+        .favorites-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .favorites-grid a {
+            text-decoration: none;
+            color: #000;
+            margin: 10px;
+        }
+
+        .favorites-grid img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .favorites-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .favorites-grid p {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.8); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dellaWEBPAGE.html">Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>My Family Photos</h1>
+        <div class="favorites-section">
+            <h2>Family Members</h2>
+            <div class="favorites-grid">
+                <a href="Screenshot_20230508_214845.jpg" data-modal="modal1">
+                    <img src="Screenshot_20230508_214845.jpg" alt="Family Member 1">
+                    <p>Family Member 1</p>
+                </a>
+                <a href="FB_IMG_1721708341814.jpg" data-modal="modal2">
+                    <img src="FB_IMG_1721708341814.jpg" alt="Family Member 2">
+                    <p>Family Member 2</p>
+                </a>
+                <a href="FB_IMG_1714043176275.jpg" data-modal="modal3">
+                    <img src="FB_IMG_1714043176275.jpg" alt="Family Member 3">
+                    <p>Family Member 3</p>
+                </a>
+                <a href="FB_IMG_1721708375164.jpg" data-modal="modal4">
+                    <img src="FB_IMG_1721708375164.jpg" alt="Family Member 4">
+                    <p>Family Member 4</p>
+                </a>
+                <a href="FB_IMG_1714752483342.jpg" data-modal="modal5">
+                    <img src="FB_IMG_1714752483342.jpg" alt="Family Member 5">
+                    <p>Family Member 5</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="Screenshot_20230508_214845.jpg" alt="Family Member 1">
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1721708341814.jpg" alt="Family Member 2">
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1714043176275.jpg" alt="Family Member 3">
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1721708375164.jpg" alt="Family Member 4">
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1714752483342.jpg" alt="Family Member 5">
+            </div>
+
+            <a href="images/family6.jpg" data-modal="modal6">
+                <img src="images/family6.jpg" alt="Family Member 6">
+                <p>Family Member 6</p>
+            </a>
+            <div id="modal6" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="images/family6.jpg" alt="Family Member 6">
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.favorites-grid a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.close').forEach(span => {
+            span.addEventListener('click', function() {
+                this.parentElement.parentElement.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randella's Family Photos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff69b4; /* Pink color */
+        }
+
+        .description {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .description p {
+            color: #666; /* Light gray for description text */
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .favorites-section {
+            margin: 20px 0;
+        }
+
+        .favorites-section h2 {
+            color: #ff69b4; /* Pink color */
+            margin-bottom: 10px;
+        }
+
+        .favorites-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .favorites-grid a {
+            text-decoration: none;
+            color: #000;
+            margin: 10px;
+        }
+
+        .favorites-grid img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .favorites-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .favorites-grid p {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.8); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dellaWEBPAGE.html">Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>My Family Photos</h1>
+        <div class="description">
+            <p>Family is the heart of our lives, a source of joy, support, and shared memories. These photos capture moments with the people who matter most to me. Each image tells a story of love, laughter, and the bonds that make family so special. Cherishing these moments helps us remember what truly matters and strengthens the connections that define our lives.</p>
+        </div>
+        <div class="favorites-section">
+            <h2>Family Members</h2>
+            <div class="favorites-grid">
+                <a href="Screenshot_20230508_214845.jpg" data-modal="modal1">
+                    <img src="Screenshot_20230508_214845.jpg" alt="Family Member 1">
+                    <p>Family Member 1</p>
+                </a>
+                <a href="FB_IMG_1721708341814.jpg" data-modal="modal2">
+                    <img src="FB_IMG_1721708341814.jpg" alt="Family Member 2">
+                    <p>Family Member 2</p>
+                </a>
+                <a href="FB_IMG_1714043176275.jpg" data-modal="modal3">
+                    <img src="FB_IMG_1714043176275.jpg" alt="Family Member 3">
+                    <p>Family Member 3</p>
+                </a>
+                <a href="FB_IMG_1721708375164.jpg" data-modal="modal4">
+                    <img src="FB_IMG_1721708375164.jpg" alt="Family Member 4">
+                    <p>Family Member 4</p>
+                </a>
+                <a href="FB_IMG_1714752483342.jpg" data-modal="modal5">
+                    <img src="FB_IMG_1714752483342.jpg" alt="Family Member 5">
+                    <p>Family Member 5</p>
+                </a>
+                <a href="received_878183093789239.jpeg" data-modal="modal6">
+                    <img src="received_878183093789239.jpeg" alt="Family Member 6">
+                    <p>Family Member 6</p>
+                </a>
+            </div>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="Screenshot_20230508_214845.jpg" alt="Family Member 1">
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1721708341814.jpg" alt="Family Member 2">
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1714043176275.jpg" alt="Family Member 3">
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1721708375164.jpg" alt="Family Member 4">
+            </div>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="FB_IMG_1714752483342.jpg" alt="Family Member 5">
+            </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="received_878183093789239.jpeg" alt="Family Member 6">
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.favorites-grid a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.close').forEach(span => {
+            span.addEventListener('click', function() {
+                this.parentElement.parentElement.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

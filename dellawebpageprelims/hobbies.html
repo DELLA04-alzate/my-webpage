@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randella's Hobbies and Favorites</title>
+    <style>
+        /* Your existing styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #ff69b4; /* Pink color */
+        }
+
+        .favorites-section {
+            margin: 20px 0;
+        }
+
+        .favorites-section h2 {
+            color: #ff69b4; /* Pink color */
+        }
+
+        .favorites-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .favorites-grid a {
+            text-decoration: none;
+            color: #000;
+            margin: 10px;
+        }
+
+        .favorites-grid img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .favorites-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .favorites-grid p {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.8); 
+            padding-top: 60px; 
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="dellaWEBPAGE.html">Home</a></li>
+                <li><a href="about2.html">About</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>My Hobbies</h1>
+        <div class="favorites-section">
+            <h3>My Hobbies</h3>
+            <div class="favorites-grid">
+                <a href="received_271356925611072.mp4" data-modal="modal7">
+                    <video controls>
+                        <source src="received_271356925611072.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Dancing</p>
+                </a>
+                <a href="received_1497461244170000.mp4" data-modal="modal8">
+                    <video controls>
+                        <source src="received_1497461244170000.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Modeling</p>
+                </a>
+             
+            </div>
+        </div>
+        <!-- <button class="btn-back" onclick="goBack()">Back to Home</button>
+    </div>
+    <button class="btn-more" onclick="toggleMore()">Read More</button>
+</div>
+
+<script>
+    function toggleMore() {
+        var moreText = document.getElementById("more");
+        var btnText = document.querySelector(".btn-more");
+
+        if (moreText.classList.contains("hidden")) {
+            moreText.classList.remove("hidden");
+            btnText.textContent = "Show Less";
+        } else {
+            moreText.classList.add("hidden");
+            btnText.textContent = "Read More";
+        }
+    }
+
+    function goBack() {
+        var moreText = document.getElementById("more");
+        var btnText = document.querySelector(".btn-more");
+
+        moreText.classList.add("hidden");
+        btnText.textContent = "Read More";
+    } -->
+</script>
+        <!-- <div class="favorites-section">
+            <h2>Foods</h2>
+            <div class="favorites-grid">
+                <a href="images/food1.jpg" data-modal="modal1">
+                    <img src="images/food1.jpg" alt="Favorite Food 1">
+                    <p>Favorite Food 1</p>
+                </a>
+                <a href="images/food2.jpg" data-modal="modal2">
+                    <img src="images/food2.jpg" alt="Favorite Food 2">
+                    <p>Favorite Food 2</p>
+                </a>
+                Add more favorite foods here -->
+            <!-- </div>
+        </div>
+        <div class="favorites-section">
+            <h2>Places</h2>
+            <div class="favorites-grid">
+                <a href="images/place1.jpg" data-modal="modal3">
+                    <img src="images/place1.jpg" alt="Favorite Place 1">
+                    <p>Favorite Place 1</p>
+                </a>
+                <a href="images/place2.jpg" data-modal="modal4">
+                    <img src="images/place2.jpg" alt="Favorite Place 2">
+                    <p>Favorite Place 2</p>
+                </a>
+               
+            </div>
+        </div>
+        <div class="favorites-section">
+            <h2>Artists</h2>
+            <div class="favorites-grid">
+                <a href="images/artist1.jpg" data-modal="modal5">
+                    <img src="images/artist1.jpg" alt="Favorite Artist 1">
+                    <p>Favorite Artist 1</p>
+                </a>
+                <a href="images/artist2.jpg" data-modal="modal6">
+                    <img src="images/artist2.jpg" alt="Favorite Artist 2">
+                    <p>Favorite Artist 2</p>
+                </a>
+                
+            </div>  -->
+        <!-- </div>
+        <div class="favorites-section">
+            <h2>My Hobbies</h2>
+            <div class="favorites-grid">
+                <a href="received_271356925611072.mp4" data-modal="modal7">
+                    <img src="received_271356925611072.mp4" alt=" Dancing ">
+                    <p>Hobbies1</p>
+                </a>
+                <a href="received_1497461244170000.mp4" data-modal="modal8">
+                    <img src="received_1497461244170000.mp4" alt="Modeling">
+                    <p>Hobbies2</p>
+                </a>
+               
+            </div>
+        </div> -->
+
+       
+        <!-- <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/food1.jpg" alt="Favorite Food 1">
+            </div>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/food2.jpg" alt="Favorite Food 2">
+            </div>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/place1.jpg" alt="Favorite Place 1">
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/place2.jpg" alt="Favorite Place 2">
+            </div>
+        </div> -->
+        <!-- <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/artist1.jpg" alt="Favorite Artist 1">
+            </div>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="images/artist2.jpg" alt="Favorite Artist 2">
+            </div>
+        </div> -->
+        <!-- <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="received_271356925611072.mp4" alt="Dancing">
+            </div>
+        </div>
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="received_1497461244170000.mp4" alt="Modeling">
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelectorAll('.favorites-grid a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.close').forEach(span => {
+            span.addEventListener('click', function() {
+                this.parentElement.parentElement.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+    </script> -->
+</body>
+</html>
